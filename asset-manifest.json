@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/DashaIhnatiuk/goit-react-hw-02-phonebook.github.io/static/css/main.0b7610e2.chunk.css",
+    "main.js": "/DashaIhnatiuk/goit-react-hw-02-phonebook.github.io/static/js/main.e677313c.chunk.js",
+    "main.js.map": "/DashaIhnatiuk/goit-react-hw-02-phonebook.github.io/static/js/main.e677313c.chunk.js.map",
+    "runtime-main.js": "/DashaIhnatiuk/goit-react-hw-02-phonebook.github.io/static/js/runtime-main.90283d9b.js",
+    "runtime-main.js.map": "/DashaIhnatiuk/goit-react-hw-02-phonebook.github.io/static/js/runtime-main.90283d9b.js.map",
+    "static/js/2.23d89dac.chunk.js": "/DashaIhnatiuk/goit-react-hw-02-phonebook.github.io/static/js/2.23d89dac.chunk.js",
+    "static/js/2.23d89dac.chunk.js.map": "/DashaIhnatiuk/goit-react-hw-02-phonebook.github.io/static/js/2.23d89dac.chunk.js.map",
+    "index.html": "/DashaIhnatiuk/goit-react-hw-02-phonebook.github.io/index.html",
+    "static/css/main.0b7610e2.chunk.css.map": "/DashaIhnatiuk/goit-react-hw-02-phonebook.github.io/static/css/main.0b7610e2.chunk.css.map",
+    "static/js/2.23d89dac.chunk.js.LICENSE.txt": "/DashaIhnatiuk/goit-react-hw-02-phonebook.github.io/static/js/2.23d89dac.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.90283d9b.js",
+    "static/js/2.23d89dac.chunk.js",
+    "static/css/main.0b7610e2.chunk.css",
+    "static/js/main.e677313c.chunk.js"
+  ]
+}
