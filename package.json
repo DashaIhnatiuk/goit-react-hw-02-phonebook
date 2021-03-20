@@ -6,7 +6,6 @@
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.7.2",
-    "gh-pages": "^3.1.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.2",
@@ -31,7 +30,7 @@
   "bugs": {
     "url": "https://github.com/DashaIhnatiuk/goit-react-hw-02-phonebook/issues"
   },
-  "homepage": "https://github.com/DashaIhnatiuk/goit-react-hw-02-phonebook.github.io",
+  "homepage": "https://DashaIhnatiuk.github.io/goit-react-hw-02-phonebook",
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -49,5 +48,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^3.1.0"
   }
 }
