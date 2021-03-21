@@ -6,71 +6,48 @@ import Filter from './Components/Filter';
 import { v4 as uuidv4 } from 'uuid';
 
 class App extends Component {
+    state = {
+        contacts: [],
+        filter: ''
+      };     
 
-    constructor(){
-        super();
-        this.handleButtonClick = this.handleButtonClick.bind(this);
-        this.handleFilterUpdate = this.handleFilterUpdate.bind(this);
-        this.handleDelete = this.handleDelete.bind(this);
-
-        this.state = {
-            contacts: [],
-            filter: ''
-          };       
+    updateContactsList = () => {
+        const {contacts, filter} = this.state;
+        return contacts.filter(contact => contact.name.toLowerCase().includes(filter.toLowerCase()))
     }
 
-    updateContactsList(){
-        let contactsForShow = [];
-        if(this.state.filter.length!==0){
-            for(let item of this.state.contacts){
-                console.log(item);
-                console.log(item.name.toLowerCase() + "  " + this.state.filter.toLowerCase())
-                if(item.name.toLowerCase().includes(this.state.filter.toLowerCase())){
-                    contactsForShow.push(item);
-                }
+    handleDelete = value => {
+        this.setState(prevState => {
+            return {
+              contacts: prevState.contacts.filter(({id}) => id !== value)
             }
-        }else{
-            contactsForShow = this.state.contacts;
-        }
-        
-        return contactsForShow;
+          }) 
     }
 
-    handleDelete(value){
-        
-        let id = 0;
-        for(let i = 0; i <this.state.contacts.length; i++){
-            if(value===this.state.contacts[i].id){
-                id = i;
-                break
-            }
-        }
-
-        this.setState({ 
-            contacts: this.state.contacts.slice(0,id).concat(this.state.contacts.slice(id+1))
-          });  
-    }
-
-    handleFilterUpdate(value){
+    handleFilterUpdate = value => {
         this.setState({ 
             filter: value
           });
           this.updateContactsList();   
     }
 
-    handleButtonClick(nameValue, numberValue){
+    handleButtonClick = (nameValue, numberValue) => {
 
-        for(let item of this.state.contacts){
-            if(item.name===nameValue){
-                alert(nameValue + " is already in contacts");
-                return;
-            }
+        const contactState = this.state.contacts.find(contact => contact.name.toLowerCase() === nameValue.toLowerCase());
+        contactState &&  alert(nameValue + " is already in contacts");
+        if (!contactState && nameValue && numberValue) {
+            const newContact = {
+                id: uuidv4(),
+                name: nameValue,
+                number: numberValue,
+              };
+              this.setState(prevState => {
+                return {
+                  contacts: [...prevState.contacts, newContact],
+                }
+              });
+            return
         }
-
-        this.setState({ 
-            contacts: this.state.contacts.concat([{id:uuidv4(), name:nameValue, number:numberValue}])
-          });   
-          this.updateContactsList();   
     };
 
     render() {
