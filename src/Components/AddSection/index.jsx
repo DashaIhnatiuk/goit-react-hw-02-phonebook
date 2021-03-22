@@ -10,11 +10,10 @@ class AddSection extends Component {
         onSendData: PropTypes.func.isRequired,
     };
 
-    constructor(props){
-        super(props);
-        this.name = '';
-        this.phone = '';
-    }
+    
+        name = '';
+        phone = '';
+    
 
     render() {
       const {onSendData } = this.props;

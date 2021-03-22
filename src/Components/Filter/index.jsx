@@ -8,10 +8,9 @@ class Filter extends Component {
         onFilterUpdate: PropTypes.func.isRequired,
     };
 
-    constructor(props){
-        super(props);
-        this.value = '';
-    }
+    
+        value = '';
+    
 
     render() {
       const {onFilterUpdate } = this.props;
